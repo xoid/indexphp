@@ -1,3 +1,5 @@
 <?
-	$mysqli = new mysqli("localhost", "aws_rent", "aws_rent", "aws_rent");
+	require "config.php";
+	$mysqli = new mysqli($host, $user, $pass, $db);
+	
 ?>
