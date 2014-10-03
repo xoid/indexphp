@@ -1,6 +1,11 @@
+mysqladmin create indexphp 2>/dev/null
+
+mysql -e "GRANT ALL PRIVILEGES ON indexphp.* TO 'indexphp'@'localhost' IDENTIFIED BY 'indexphp';"
+
+cat<<EOF|mysql -f -u indexphp -pindexphp indexphp 
 CREATE TABLE `Люди`
 (
-	id			integer not null auto_increment,
+	`id`		MEDIUMINT  not null auto_increment,
 	`Имя` 		varchar(32),
     `Полное имя` varchar(64),	
 	`Статус` 	varchar(10),
@@ -13,7 +18,7 @@ CREATE TABLE `Люди`
 
 CREATE TABLE `Фирмы`
 (
-	id 			integer not null auto_increment,
+	`id` 		MEDIUMINT  not null auto_increment,
     `Имя`       varchar(32),
     `Полное имя` varchar(64),
     `Статус`    varchar(10),
@@ -26,7 +31,7 @@ CREATE TABLE `Фирмы`
 
 CREATE TABLE `Заказы`
 (
-    id          integer not null auto_increment,
+    `id`        MEDIUMINT  not null auto_increment,
 	`Имя`       varchar(32),
 	`Полное имя` varchar(64),
 	`Заказчик`   	integer,
@@ -39,4 +44,5 @@ CREATE TABLE `Заказы`
 	PRIMARY KEY (id)
 ) ENGINE=MyISAM;
                               
+EOF
                                 

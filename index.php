@@ -1,18 +1,20 @@
 <? 
-	require 'mysql.php';
-	require 'lib.php'
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	include 'config.php';
+	include 'mysql.php';
+	include 'lib.php';
 ?>
 
 <html>
 <head>
 	<title>
-		<? title();?>
+		<? title(); ?>
 	</title>
 </head>
 <body>
-	<? menu(); 
-	echo $0;
-	phpinfo(); ?>
+	LOL
+	<? menu(); ?>
 	<p/>
 	<h1>
 		<? title();	 ?>

@@ -9,29 +9,27 @@ function menu()
 	return "<a href=index.php?users> USERS </a> 
 			<a href=index.php?types> TYPES </a>
 			<a href=index.php?servers> SERVERS </a><hr>";
-			
 }
 
 function title()
 {
 	 //return mysql_escape_string();
-	return strtoupper($table);
-	
-
+	return $table;
 }
 
 function table_header()
 {
-	return 
+	return 0;
 }
 
 function table_body()
 {
-
+	return '';
 }
 
 function footer()
 {
+	return '';
 }
 
 ?>
